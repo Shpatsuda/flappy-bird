@@ -10,7 +10,7 @@ public class birdController : MonoBehaviour
       private CircleCollider2D birdCollider;
       public GameObject screenBorders;
       private BoxCollider2D screenCollider;
-      private bool dead;
+      public bool dead;
         // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +39,6 @@ public class birdController : MonoBehaviour
     {
         if (collider = screenCollider)
         {
-            Debug.Log("ya vishel");
             dead = true;
         }
     }
