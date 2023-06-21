@@ -12,7 +12,12 @@ public class birdController : MonoBehaviour
       private BoxCollider2D screenCollider;
       public bool dead;
       private float birdZRotation;
+      public float minClampRot = -85;
+      public float maxClampRot = 20;
       public float birdrotspeed = 1;
+      private float rotationAngle;
+      private Quaternion birdClampRot;
+
         // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +41,19 @@ public class birdController : MonoBehaviour
             birdPhysics.bodyType = RigidbodyType2D.Static;
         }
 
+        if ((rotationAngle < minClampRot) || (rotationAngle > maxClampRot))
+        {
+
+            bird.transform.rotation = Quaternion.Slerp(bird.transform.rotation, birdClampRot, 0.04f);
+
+        }
+
         birdZRotation = birdPhysics.velocity.y * birdrotspeed;
         bird.transform.Rotate(new Vector3(0, 0, birdZRotation));
+        rotationAngle = bird.transform.rotation.z;
+        Mathf.Clamp(rotationAngle, minClampRot, maxClampRot);
+        birdClampRot = Quaternion.Euler(0, 0, rotationAngle);
+
 
     }
 
