@@ -442,6 +442,7 @@ MonoBehaviour:
   jump: 350
   screenBorders: {fileID: 2073719326}
   dead: 0
+  birdrotspeed: 0.013
 --- !u!58 &1055182606
 CircleCollider2D:
   m_ObjectHideFlags: 0

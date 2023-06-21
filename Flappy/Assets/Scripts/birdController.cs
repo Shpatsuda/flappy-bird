@@ -11,6 +11,8 @@ public class birdController : MonoBehaviour
       public GameObject screenBorders;
       private BoxCollider2D screenCollider;
       public bool dead;
+      private float birdZRotation;
+      public float birdrotspeed = 1;
         // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,10 @@ public class birdController : MonoBehaviour
         {
             birdPhysics.bodyType = RigidbodyType2D.Static;
         }
+
+        birdZRotation = birdPhysics.velocity.y * birdrotspeed;
+        bird.transform.Rotate(new Vector3(0, 0, birdZRotation));
+
     }
 
     private void OnTriggerExit2D(Collider2D collider)
