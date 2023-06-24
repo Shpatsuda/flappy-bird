@@ -59,7 +59,7 @@ public class birdController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider = screenCollider)
+        if (collider == screenCollider)
         {
             dead = true;
         }
