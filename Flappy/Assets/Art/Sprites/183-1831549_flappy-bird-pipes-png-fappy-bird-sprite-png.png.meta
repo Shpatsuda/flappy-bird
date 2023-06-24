@@ -199,7 +199,7 @@ TextureImporter:
         width: 54
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,6 +207,27 @@ TextureImporter:
       bones: []
       spriteID: 74620afc3620c844fb0fc5592fe744ec
       internalID: 1159711753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipe
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 655
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1525122a5d460ea4ebe56e472ef36a86
+      internalID: 1416181244
       vertices: []
       indices: 
       edges: []
@@ -225,6 +246,7 @@ TextureImporter:
       bird1: -1250981212
       bird2: -508180798
       bird3: 1159711753
+      pipe: 1416181244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
