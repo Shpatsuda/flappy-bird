@@ -64,4 +64,12 @@ public class birdController : MonoBehaviour
             dead = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 3)
+        {
+            dead = true;
+        }
+    }
 }
