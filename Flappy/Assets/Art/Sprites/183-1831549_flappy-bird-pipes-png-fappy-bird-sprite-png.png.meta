@@ -145,6 +145,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -220,7 +233,7 @@ TextureImporter:
         width: 82
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,6 +241,27 @@ TextureImporter:
       bones: []
       spriteID: 1525122a5d460ea4ebe56e472ef36a86
       internalID: 1416181244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kusokPipe
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 698
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cae3d32e7fe0df419f5c2390616b2af
+      internalID: 1700957079
       vertices: []
       indices: 
       edges: []
@@ -243,9 +277,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      183-1831549_flappy-bird-pipes-png-fappy-bird-sprite-png_0: -1288073812
       bird1: -1250981212
       bird2: -508180798
       bird3: 1159711753
+      kusokPipe: 1700957079
       pipe: 1416181244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

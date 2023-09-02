@@ -23,7 +23,7 @@ public class pipeController : MonoBehaviour
     void Update()
     {
         pipePhysics.velocity = new Vector2(-pipeSpeed, 0);
-        if (pipe.transform.position.x < -10)
+        if (pipe.transform.position.x < -12)
         {
             Destroy(pipe);
         }
