@@ -15,6 +15,13 @@ public class Spawner : MonoBehaviour
         InvokeRepeating(nameof(Spawn), spawnInterval, spawnInterval);
 
     }
+
+    private void OnDisable()
+    {
+        
+        CancelInvoke(nameof(Spawn));
+
+    }
     private void Spawn()
     {
 

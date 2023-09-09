@@ -10,7 +10,6 @@ public class birdController : MonoBehaviour
       private CircleCollider2D birdCollider;
       public GameObject screenBorders;
       private BoxCollider2D screenCollider;
-      public bool dead;
       private float birdZRotation;
       public float minClampRot = -85;
       public float maxClampRot = 20;
@@ -30,15 +29,10 @@ public class birdController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (!dead))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             birdPhysics.velocity = Vector2.zero;
             birdPhysics.AddForce(Vector2.up * jump);
-        }
-
-        if (dead == true)
-        {
-            birdPhysics.bodyType = RigidbodyType2D.Static;
         }
 
         if ((rotationAngle < minClampRot) || (rotationAngle > maxClampRot))
@@ -61,7 +55,12 @@ public class birdController : MonoBehaviour
     {
         if (collider == screenCollider)
         {
-            dead = true;
+            FindObjectOfType<gameManager>().gameOver();
+        }
+
+        if (collider.gameObject.layer == 6)
+        {
+            FindObjectOfType<gameManager>().addscore();
         }
     }
 
@@ -69,7 +68,7 @@ public class birdController : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
-            dead = true;
+            FindObjectOfType<gameManager>().gameOver();
         }
     }
 }
