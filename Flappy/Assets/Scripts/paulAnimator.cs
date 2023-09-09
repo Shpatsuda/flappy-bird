@@ -10,6 +10,7 @@ public class paulAnimator : MonoBehaviour
     private SpriteRenderer paulRenderer;
     private float textureOffset;
     public float scrollSpeed = 1;
+    public bool gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class paulAnimator : MonoBehaviour
     void Update()
     {
 
-        if (birdCtrl.dead == false)
+        if (!gameOver)
         {
 
             textureOffset = Time.time * scrollSpeed;
